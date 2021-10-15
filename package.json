@@ -1,0 +1,22 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Jes-Another-RPMG-GAme",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeffGoji/jest-another-RPG.git"
+  },
+  "author": "Jeffrey Anderson-Lester",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/JeffGoji/jest-another-RPG/issues"
+  },
+  "homepage": "https://github.com/JeffGoji/jest-another-RPG#readme",
+  "devDependencies": {
+    "jest": "^27.2.5"
+  }
+}
