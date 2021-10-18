@@ -35,3 +35,32 @@ test("gets inventory from player or returns false", () => {
 
   expect(player.getInventory()).toEqual(false);
 });
+
+test("gets player's health value", () => {
+  const player = new Player("Dave");
+
+  expect(player.getHealth()).toEqual(
+    expect.stringContaining(player.health.toString())
+  );
+});
+
+//Check that potion was added correctly:
+test("adds a potion to the inventory", () => {
+  const player = new Player("Dave");
+  const oldCount = player.inventory.length;
+
+  player.addPotion(new Potion());
+
+  expect(player.inventory.length).toBeGreaterThan(oldCount);
+});
+
+//Check to see if Potion was used:
+test("uses a potion from inventory", () => {
+  const player = new Player("Dave");
+  player.inventory = [new Potion(), new Potion(), new Potion()];
+  const oldCount = player.inventory.length;
+
+  player.usePotion(1);
+
+  expect(player.inventory.length).toBeLessThan(oldCount);
+});
